@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MultiShop.Data;
 
 namespace MultiShop.Repository
 {
-    public class CategoryRepository
+
+    public class CategoryRepository : Repository<Category>, ICategoryRepository
     {
+        public CategoryRepository(MultiShopDbContext dbContext): base(dbContext)
+        {
+            
+        }
     }
 }

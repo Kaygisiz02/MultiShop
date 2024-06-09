@@ -6,8 +6,10 @@ namespace MultiShop.Business
     {
         public SliderMappingProfile()
         {
-            CreateMap<Category, CategoryDto>()
-                .ReverseMap();
+            CreateMap<Slider, SliderDto>()//Slider'ı SliderDtoya dönüştürür
+                .ReverseMap();//Tersini yapar
         }
     }
 }
+//CreateMap<Source,Destination>
+//.ForMember(dest=>HangiAlana,Neyin set edileceğini Yazar)

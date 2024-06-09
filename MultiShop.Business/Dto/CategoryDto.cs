@@ -14,6 +14,6 @@ namespace MultiShop.Business
         public required string CategoryName { get; set; }
         public int? Order { get; set; }
         public string CatIdAndName { get; set; }
-        public string ParentCategryIdAndName { get; set; }
+        public string ParentCategoryIdAndName { get; set; }
     }
 }
