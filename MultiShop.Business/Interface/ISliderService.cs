@@ -3,5 +3,5 @@
     public interface ISliderService
     {
         List<SliderDto> GetSliders();
-    }
+    }  
 }

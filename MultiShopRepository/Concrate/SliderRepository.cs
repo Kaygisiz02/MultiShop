@@ -13,5 +13,5 @@ namespace MultiShop.Repository
         public SliderRepository(MultiShopDbContext dbContext):base(dbContext)
         {
         }
-    }
+    }    
 }

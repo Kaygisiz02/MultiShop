@@ -1,6 +1,6 @@
 ﻿namespace MultiShop.Data
 {
-    public class Category: BaseEntity,IOrder
+    public class Category: BaseEntity,IOrdered
     {
         public int CategoryId { get; set; }
         public int? ParentCategoryId { get; set; }
