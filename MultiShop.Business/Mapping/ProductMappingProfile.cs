@@ -2,14 +2,14 @@
 using MultiShop.Data;
 namespace MultiShop.Business
 {
-    public class SliderMappingProfile : Profile
+    public class ProductMappingProfile : Profile
     {
-        public SliderMappingProfile()
+        public ProductMappingProfile()
         {
-            CreateMap<Slider, SliderDto>()//Slider'ı SliderDtoya dönüştürür
+            CreateMap<Product, ProductDto>()//Slider'ı SliderDtoya dönüştürür
                 .ReverseMap();//Tersini yapar
         }
-    } 
+    }
 }
 //CreateMap<Source,Destination>
 //.ForMember(dest=>HangiAlana,Neyin set edileceğini Yazar)

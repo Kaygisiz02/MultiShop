@@ -8,10 +8,12 @@ builder.Services.AddControllersWithViews();//1) Kontroller views alt yapýsýný en
 //Servis Entegrasyonu
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<ISliderService, SliderService>();
+builder.Services.AddScoped<IProductService, ProductService>();
 
 //Repository Entegrasypnu
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<ISliderRepository, SliderRepository>();
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
 //4: for connection Db
 //bunun set edildiði yer MultiShopDbContext içerisinde constroctor metottur.
 builder.Services.AddDbContext<MultiShopDbContext>(options =>
@@ -20,6 +22,7 @@ builder.Services.AddDbContext<MultiShopDbContext>(options =>
 });
 builder.Services.AddAutoMapper(typeof(CategoryMappingProfile));
 builder.Services.AddAutoMapper(typeof(SliderMappingProfile));
+builder.Services.AddAutoMapper(typeof(ProductMappingProfile));
 var app = builder.Build();
 
 app.MapControllerRoute("default",pattern : "{Controller=Home}/{action=Index}/{id?}");//2

@@ -9,11 +9,13 @@ namespace MultiShop.Presentation.Controllers
     {
         readonly ICategoryService _categoryService;
         readonly ISliderService _sliderService;
+        readonly IProductService _productService;
 
-        public HomeController(ICategoryService categoryService,ISliderService sliderService)
+        public HomeController(ICategoryService categoryService,ISliderService sliderService,IProductService productService)
         {
             _categoryService=categoryService;
             _sliderService=sliderService;
+            _productService=productService;
         }
 
 
@@ -32,6 +34,7 @@ namespace MultiShop.Presentation.Controllers
             var categores = _categoryService.GetCategories().AsQueryable().Where(predicate[0]);
 
             var slider = _sliderService.GetSliders();
+            var product = _productService.GetProducts();
             return View();
         }
     }
