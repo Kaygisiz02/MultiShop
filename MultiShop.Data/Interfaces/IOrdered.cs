@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MultiShop.Data
 {
-    public interface IOrder
+    public interface IOrdered
     {
         public int? Order { get; set; }
     }
