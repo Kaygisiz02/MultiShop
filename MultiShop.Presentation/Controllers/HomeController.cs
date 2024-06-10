@@ -1,10 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using MultiShop.Business;
-using MultiShop.Data;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Linq.Expressions;
-namespace MultiShop.Presentation.Controllers
+﻿namespace MultiShop.Presentation.Controllers
 {
     public class HomeController(ICategoryService categoryService, ISliderService sliderService, IProductService productService):  Controller
     {

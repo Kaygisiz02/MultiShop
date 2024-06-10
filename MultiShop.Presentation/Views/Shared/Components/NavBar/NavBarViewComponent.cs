@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using MultiShop.Business;
-
-namespace MultiShop.Presentation.Views.Shared.Components.NavBar
+﻿namespace MultiShop.Presentation
 {
     public class NavBarViewComponent : ViewComponent
     {

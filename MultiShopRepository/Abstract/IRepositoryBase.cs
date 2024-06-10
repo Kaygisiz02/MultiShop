@@ -1,6 +1,4 @@
-﻿using System.Linq.Expressions;
-
-namespace MultiShop.Repository
+﻿namespace MultiShop.Repository
 {
     //Tüm entityle için ortak olan metodların imzalrını barındırır.
     public interface IRepository<TEntity> where TEntity : class

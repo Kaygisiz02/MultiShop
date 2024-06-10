@@ -1,9 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using MultiShop.Data;
-using System;
-using System.Linq.Expressions;
-
-namespace MultiShop.Repository
+﻿namespace MultiShop.Repository
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {

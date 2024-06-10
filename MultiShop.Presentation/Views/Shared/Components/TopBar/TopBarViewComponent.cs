@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-namespace MultiShop.Presentation.Views.Shared.Components.TopBar
+﻿namespace MultiShop.Presentation
 {
     public class TopBarViewComponent : ViewComponent
     {    //TopBar

@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-namespace MultiShop.Presentation.Views
+﻿namespace MultiShop.Presentation
 {
     public class FooterViewComponent:ViewComponent
     {

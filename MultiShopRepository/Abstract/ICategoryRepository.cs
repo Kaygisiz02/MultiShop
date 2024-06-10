@@ -1,5 +1,4 @@
-﻿using MultiShop.Data;
-namespace MultiShop.Repository
+﻿namespace MultiShop.Repository
 {
     public interface ICategoryRepository:IRepository<Category>
     {

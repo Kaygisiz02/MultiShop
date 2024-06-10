@@ -1,9 +1,4 @@
-﻿using AutoMapper;
-using MultiShop.Business;
-using MultiShop.Data;
-using MultiShop.Repository;
-
-namespace MultiShop.Business
+﻿namespace MultiShop.Business
 {
 
     public class CategoryService(ICategoryRepository categoryRepository, IMapper mapper) : ICategoryService
