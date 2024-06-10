@@ -1,27 +1,18 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MultiShop.Business;
 using MultiShop.Data;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Linq.Expressions;
 namespace MultiShop.Presentation.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController(ICategoryService categoryService, ISliderService sliderService, IProductService productService):  Controller
     {
-        readonly ICategoryService _categoryService;
-        readonly ISliderService _sliderService;
-        readonly IProductService _productService;
-
-        public HomeController(ICategoryService categoryService,ISliderService sliderService,IProductService productService)
-        {
-            _categoryService=categoryService;
-            _sliderService=sliderService;
-            _productService=productService;
-        }
-
-
+        readonly ICategoryService _categoryService = categoryService;
+        readonly ISliderService _sliderService=sliderService;
+        readonly IProductService _productService=productService;
         public IActionResult Index()
         {
-
             //var predicate =new List<Expression<Func<Category, bool>>>();
 
             //predicate.Add(c=> c.CategoryId == 1);
@@ -36,6 +27,22 @@ namespace MultiShop.Presentation.Controllers
             var slider = _sliderService.GetSliders();
             var product = _productService.GetProducts();
             return View();
+
         }
+        [Experimental("thisLineWillbeCheck")]
+        public void DeleteAllUsers()
+        {
+            //Raw String 
+            var favoriteNumber = 5;
+
+            var query = $"""
+                 select $* 
+                 from Product
+                 where price>{favoriteNumber}
+                 order by price asc
+                """;
+
+        }
+
     }
 }

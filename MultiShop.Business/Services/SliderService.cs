@@ -5,15 +5,11 @@ using static MultiShop.Business.SliderService;
 
 namespace MultiShop.Business
 {
-    public  class SliderService : ISliderService
+    public  class SliderService(ISliderRepository sliderRepository, IMapper mapper) : ISliderService
     {
-        private readonly ISliderRepository _sliderRepository;
-        private readonly IMapper _mapper;
-        public SliderService(ISliderRepository sliderRepository, IMapper mapper)
-        {
-            _sliderRepository = sliderRepository;
-            _mapper=mapper;
-        }
+        private readonly ISliderRepository _sliderRepository = sliderRepository;
+        private readonly IMapper _mapper = mapper;
+
 
         public List<SliderDto> GetSliders()
         {
