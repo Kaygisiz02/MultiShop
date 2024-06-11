@@ -3,8 +3,9 @@
     public class Slider: BaseEntity, IOrdered
     {
         public int Id { get; set; }
-        public string Header { get; set; }
-        public string Image { get; set; }
+        public required string Header { get; set; }
+        public required string Content { get; set; }
+        public required string Image { get; set; }
         public int SliderPosition { get; set; }
         public DateTime CrationDate { get; set; }
         public int? Order { get; set ; }

@@ -3,9 +3,9 @@
     public class ProductViewComponent(IProductRatingService productRatingService) :ViewComponent
     {
         readonly IProductRatingService _productRatingService = productRatingService;
-        public IViewComponentResult Invoke()
+        public IViewComponentResult Invoke(ProductHeaderType productHeaderType)
         {
-            List<ProductDto> products = _productRatingService.GetProductWithRatings();
+            List<ProductDto> products = _productRatingService.GetProductWithRatings(productHeaderType);
             return View(products);
         }
     }

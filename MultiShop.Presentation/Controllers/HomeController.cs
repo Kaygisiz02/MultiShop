@@ -18,7 +18,7 @@
             //select * from Where //Sorgulanabilir 
             var categores = _categoryService.GetCategories().AsQueryable().Where(predicate[0]);
 
-            var slider = _sliderService.GetSliders();
+            //var slider = _sliderService.GetSliders();
             var product = _productService.GetProducts();
             return View();
 

@@ -12,10 +12,19 @@ namespace MultiShop.Business.Services
         private readonly IProductRatingRepository _productRatingRepository=productRatingRepository;
         private readonly IMapper _mapper=mapper;
         private readonly IProductRepository _productRepository = productRepository;
-        public List<ProductDto> GetProductWithRatings()
+        public List<ProductDto> GetProductWithRatings(ProductHeaderType productHeaderType)
         {
           List<ProductRating> productRatings=_productRatingRepository.GetAll();
-            List<ProductDto> productDtos=_mapper.Map<List<ProductDto>>(_productRepository.GetAll());
+            List<ProductDto> productDtos = [];
+
+            if (productHeaderType == ProductHeaderType.FeaturedProducts)
+            {
+                productDtos = _mapper.Map<List<ProductDto>>(_productRepository.GetAll().Take(24));
+            }
+            if (productHeaderType == ProductHeaderType.RecentProducts)
+            {
+                productDtos = _mapper.Map<List<ProductDto>>(_productRepository.GetAll().OrderByDescending(x => x.CrationDate).Take(8));
+            }
 
             foreach (ProductDto productDto in productDtos)
             {
