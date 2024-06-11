@@ -1,6 +1,4 @@
-﻿using AutoMapper;
-using MultiShop.Data;
-namespace MultiShop.Business
+﻿namespace MultiShop.Business
 {
     public class CategoryMappingProfile:Profile
     {

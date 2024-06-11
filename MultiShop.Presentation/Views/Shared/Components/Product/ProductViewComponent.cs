@@ -1,11 +1,11 @@
 ﻿namespace MultiShop.Presentation
 {
-    public class ProductViewComponent(IProductService productService):ViewComponent
+    public class ProductViewComponent(IProductRatingService productRatingService) :ViewComponent
     {
-        readonly IProductService _productService=productService;
+        readonly IProductRatingService _productRatingService = productRatingService;
         public IViewComponentResult Invoke()
         {
-            List<ProductDto> products =_productService.GetProducts();
+            List<ProductDto> products = _productRatingService.GetProductWithRatings();
             return View(products);
         }
     }

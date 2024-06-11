@@ -7,7 +7,8 @@
         public string? Image { get; set; }
         public required string CategoryName { get; set; }
         public int? Order { get; set; }
-        public string CatIdAndName { get; set; }
-        public string ParentCategoryIdAndName { get; set; }
+        public string? CatIdAndName { get; set; }
+        public string? ParentCategoryIdAndName { get; set; }
+        public int ProductCount { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using MultiShop.Business;
+using MultiShop.Business.Services;
 using MultiShop.Data;
 using MultiShop.Repository;
 
@@ -9,11 +10,13 @@ builder.Services.AddControllersWithViews();//1) Kontroller views alt yapýsýný en
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<ISliderService, SliderService>();
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IProductRatingService, ProductRatingService>();
 
 //Repository Entegrasypnu
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<ISliderRepository, SliderRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IProductRatingRepository, ProductRatingRepository>();
 //4: for connection Db
 //bunun set edildiði yer MultiShopDbContext içerisinde constroctor metottur.
 builder.Services.AddDbContext<MultiShopDbContext>(options =>

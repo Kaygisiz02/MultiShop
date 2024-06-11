@@ -5,7 +5,7 @@
         readonly ICategoryService  _categoryService=categoryService;
         public IViewComponentResult Invoke()
         {
-            List<CategoryDto> categories = _categoryService.GetCategories();
+            List<CategoryDto> categories = _categoryService.GetCategoriesWithProductCount();
             return View(categories);
         }
     }

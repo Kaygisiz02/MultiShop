@@ -6,9 +6,9 @@
         private readonly IMapper _mapper = mapper;
         public List<ProductDto> GetProducts()
         {
-            List<Product> categories = _productRepository.GetAll();
-            List<ProductDto> categoriDtos = _mapper.Map<List<ProductDto>>(categories);
-            return categoriDtos;
+            List<Product> products = _productRepository.GetAll();
+            List<ProductDto> productDtos = _mapper.Map<List<ProductDto>>(products);
+            return productDtos;
 
         }
     }

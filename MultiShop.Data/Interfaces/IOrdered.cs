@@ -3,5 +3,5 @@
     public interface IOrdered
     {
         public int? Order { get; set; }
-    }
+    }  
 }
