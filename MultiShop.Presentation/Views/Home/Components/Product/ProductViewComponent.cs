@@ -1,6 +1,6 @@
-﻿namespace MultiShop.Presentation
+﻿namespace MultiShop.Presentation.Views.Home.Components.Product
 {
-    public class ProductViewComponent(IProductRatingService productRatingService) :ViewComponent
+    public class ProductViewComponent(IProductRatingService productRatingService) : ViewComponent
     {
         readonly IProductRatingService _productRatingService = productRatingService;
         public IViewComponentResult Invoke(ProductHeaderType productHeaderType)
